@@ -1,6 +1,17 @@
 # FlightSurety
 
+
 FlightSurety is a sample application project for Udacity's Blockchain course.
+
+## Version used
+Nodejs v10.12.0
+Truffle v5.0.2
+Solidity v0.4.25
+
+## Setup Ganache
+Setup ganache num of accounts: 100
+Default balance: 500 ETH
+Gas: 10000000 Wei
 
 ## Install
 
