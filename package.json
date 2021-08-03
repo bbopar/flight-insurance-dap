@@ -9,9 +9,10 @@
   "license": "MIT",
   "scripts": {
     "test": "truffle test ./test/flightSurety.js",
-    "dapp": "webpack-dev-server --mode development --config webpack.config.dapp.js",
+    "dapp": "webpack serve --mode development --config webpack.config.dapp.js",
     "dapp:prod": "webpack --mode production  --config webpack.config.dapp.js",
-    "server": "rm -rf ./build/server && webpack --config webpack.config.server.js"
+    "server": "rm -rf ./build/server && webpack --config webpack.config.server.js",
+    "build-dev": "webpack serve --config webpack.dev.js --open"
   },
   "author": "Nik Kalyani <nik@kalyani.com> https://www.kalyani.com",
   "devDependencies": {
@@ -20,6 +21,7 @@
     "@babel/plugin-proposal-class-properties": "^7.0.0-beta.46",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
+    "@webpack-cli/serve": "^1.5.1",
     "babel-core": "6.26.3",
     "babel-loader": "8.0.5",
     "babel-polyfill": "6.26.0",
@@ -38,10 +40,13 @@
     "truffle": "5.0.2",
     "truffle-hdwallet-provider": "1.0.2",
     "web3": "1.0.0-beta.37",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "3.1.14",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.5.12",
+    "webpack-dev-server": "^3.11.2",
     "webpack-node-externals": "1.7.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.4.1",
+    "moment": "^2.29.1"
+  }
 }
